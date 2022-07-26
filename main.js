@@ -35,17 +35,14 @@ function makeCoffe(coffeType){
 }
 
 function choseAction() {
-    let success = true;
-    
+    let success = true;    
     while (success === true){        
         console.log();
         console.log("Write action (buy, fill, take, remaining, exit):")
         let action = input().toUpperCase();
         console.log();
         switch (action) {
-            case "BUY":
-            {
-                
+            case "BUY": {                
                 choseCoffeeType();
                 success = true;
                 break;
@@ -61,7 +58,7 @@ function choseAction() {
                 success = true;
                 break;
             }
-            case "REMAINING":{                
+            case "REMAINING": {                
                 machineStatus();
                 success = true;
                 break;
@@ -70,14 +67,12 @@ function choseAction() {
                 success = false;
                 break;
             }
-
             default: {
                 success = false;
                 break;
             }
         }
-
-    }  ;
+    };
 }
 
 function choseCoffeeType(){
@@ -126,7 +121,7 @@ function checkInputIsNaN(){
 }
 
 function machineStatus(){
-    console.log(`The coffee machine has:
+   console.log(`The coffee machine has:
 ${machineWater} ml of water
 ${machineMilk} ml of milk
 ${machineBeans} g of coffee beans
